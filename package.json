@@ -1,0 +1,75 @@
+{
+  "name": "test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.4.0",
+    "cross-env": "^7.0.3",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.11.6",
+    "detect-inapp": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "framer-motion": "^6.5.1",
+    "gapi-script": "^1.2.0",
+    "gh-pages": "^5.0.0",
+    "i18next": "^22.1.4",
+    "js-base64": "^3.7.3",
+    "js-cookie": "^3.0.5",
+    "numeral": "^2.0.6",
+    "qrcode.react": "^3.1.0",
+    "react": "^18.2.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^12.1.1",
+    "react-icons": "^4.11.0",
+    "react-infinite-scroller": "^1.2.6",
+    "react-lazy-load-image-component": "^1.6.0",
+    "react-marquee-master": "^1.4.5",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "react-semantic-ui-datepickers": "^2.17.2",
+    "react-world-flags": "^1.5.1",
+    "redux": "^4.2.0",
+    "semantic-ui-css": "^2.5.0",
+    "semantic-ui-react": "^2.1.4",
+    "swiper": "^9.3.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "cross-env REACT_APP_SECRET_TYPE=local REACT_APP_ENV=local REACT_APP_SECRET_ENV=development  react-scripts start",
+    "build": "cross-env REACT_APP_SECRET_TYPE=sandbox REACT_APP_SECRET_ENV=development react-scripts build",
+    "dev": "cross-env BUILD_PATH='./devBuild'  REACT_APP_SECRET_TYPE=sandbox REACT_APP_SECRET_ENV=development react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "ftpDeploy": "npm run build && node developDeploy.js",
+    "upload": "node developDeploy.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "ssh2-sftp-client": "^9.1.0",
+    "tailwindcss": "^3.3.2"
+  }
+}
